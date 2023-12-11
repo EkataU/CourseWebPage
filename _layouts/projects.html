@@ -1,0 +1,18 @@
+---
+layout: default
+---
+layout: default
+title: Projects
+notitle: true
+---
+
+
+<br><br>
+<section class="people project-people">
+    {% for uname in page.people %}
+        {% assign person = site.data.people[uname] %}
+        {% include person.html person=person image=true%}
+    {% endfor %}
+</section>
+
+{{ content }}
